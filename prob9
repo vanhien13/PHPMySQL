@@ -1,0 +1,57 @@
+Problem 9:
+
+(the code)
+
+<html>
+<head>
+<?php 
+error_reporting(E_ALL ^ E_NOTICE);
+
+switch (($_POST['info'])) {
+    case "San Francisco";
+	echo "Expect breezy weather!";
+	break;
+	case "New York";
+    echo "You must see the Statue of Liberty!";
+    break;
+    case "London";
+    echo "If you get a chance, please say Hi to the Queen Mother!";
+    break;
+    case "Paris";
+    echo "You must see the Effiel Tower!";
+    break;
+    case "Honolulu";
+    echo "Let's hit the beach later!";
+    break;
+    case "Tokyo";
+    echo "How about some sake and sushi later!";
+    break;
+    default:
+    echo "You didn't choose a city";
+    break;
+         }  
+?>
+
+
+
+
+<title>Where are you heading to?</title>
+
+</head>
+<body>
+
+
+<form action=<?php echo $_SERVER["PHP_SELF"]; ?> method="POST">
+  San Francisco <input type="radio" name="info" value="San Francisco" /><br />
+  New York <input type="radio" name="info" value="New York" /><br />
+  London    <input type="radio" name="info" value="London"  /><br />
+  Paris       <input type="radio" name="info" value="Paris"  /><br />
+  Honolulu  <input type="radio" name="info" value="Honolulu"  /><br />
+  Tokyo       <input type="radio" name="info" value="Tokyo"  /><br />
+  <input type="Submit" value="Which is your favorite city?" />
+</form>
+
+
+</body>
+</html>
+ (the output)
