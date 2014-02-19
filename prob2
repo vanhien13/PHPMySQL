@@ -1,0 +1,70 @@
+Problem 2:
+
+(the codes)
+<html>
+<body>
+<?php
+
+// Define initial values
+$person_num = 0;
+$heads_total = 0;
+$tails_total = 0;
+$total_total = 0;
+$toss_num=0;
+$heads_num = 0;
+$tails_num = 0;
+// Starting the border of the table
+echo "<table border=\"1\" alin=\"center\">";
+echo "<tr><th>Person</th>";
+echo "<th>Heads</th>";
+echo "<th>Tails</th>";
+echo "<th>Total</th></tr>";
+// Tossing the coin for each of the ten people until one gets one heads and one tails
+while ($person_num < 10) {
+  $heads_num = 0;
+  $tails_num = 0;
+  for ($x = 0; $x < 100000; $x++) {
+    if (rand(0,1) == 0)
+       $heads_num++;
+    else
+       $tails_num++;
+       if($heads_num>=1 && $tails_num>=1)
+          break;
+}
+    $toss_num += $tails_num + $heads_num;
+    $heads_total+=$heads_num;
+    $tails_total+=$tails_num;
+    $person_num ++;
+// Putting the results from the above loop in the table
+    echo "<tr><td>";
+    echo $person_num;
+    echo "</td><td>";
+    echo $heads_num;
+    echo "</td><td>";
+    echo $tails_num;
+    echo "</td><td>";
+    echo $heads_num + $tails_num;
+    echo "</td><tr>";
+}
+
+// Calculating averaged statistics
+$total_total = $heads_total + $tails_total;
+$aver_total = $total_total/10;
+$aver_tails = $tails_total/10;
+$aver_heads = $heads_total/10;
+
+// Finishing off the table
+echo "<tr><td>Total</td>";
+echo "<td>$heads_total</td>";
+echo "<td>$tails_total</td>";
+echo "<td>$total_total</td></tr>";
+echo "<tr><td>Average</td>";
+echo "<td>$aver_heads</td>";
+echo "<td>$aver_tails</td>";
+echo "<td>$aver_total</td></tr>";
+echo "</table>";
+?>
+</body>
+</html>
+(the output)
+ 
