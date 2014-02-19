@@ -1,0 +1,31 @@
+Problem 10:
+
+(the code)
+PHP
+
+<html><head><title>Currency Exchange</title></head>
+<body bgcolor = "ffffcc">
+<font face="verdana" size="+1">
+<?php
+    extract ($_REQUEST);
+	
+	exchange_rate($E);
+         
+	function exchange_rate($Euro){
+            print "The amount of money spent in Germany: "
+	   . $Euro * 1.3262. " dollars.<br />";
+	 }
+	
+?>
+</body></html>
+HTML
+   <html><head><title>Currency Exchange</title></head>
+   <body bgcolor="lavender">
+   <form action="ques10.php">
+   <p>
+    How much money did you spend in Germany in Euros?
+   <input type="text" size=6 name="E">
+   <p>
+   <input type="submit" name="submit" value="Get Dollars" >
+</form> 
+(the output)
