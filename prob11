@@ -1,0 +1,38 @@
+Problem 11:
+
+(the code)
+PHP
+
+<?php
+
+
+$or_text = $_GET['value'];
+$type = $_GET['type'];
+
+
+function converter($or_text, $type){
+
+switch ($type) {
+
+case "upper":
+return strtoupper($or_text);
+break;
+
+case "lower":
+return strtolower($or_text);
+break;
+
+case "title":
+return ucwords($or_text);
+break;
+
+}
+}
+
+echo "The original text: ".$or_text."</br>";
+
+echo "The converted text: " .converter($or_text,$type);
+
+?>
+
+ (the output)
