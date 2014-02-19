@@ -1,0 +1,41 @@
+Problem 5:
+
+(the code)
+PHP
+
+<?php
+
+<html><head><title>Test for even numbers</title></head>
+<body bgcolor = "ffffcc">
+<font face="verdana" size="+1">
+<?php
+     	 
+	 extract ($_REQUEST);
+     
+	 	 
+	 evennumbercheck($number);
+	 function evennumbercheck($number){
+        if ((is_numeric($number)) && ((round($number)) % 2)){
+            echo"$number is odd";
+		 }
+		 elseif((is_numeric($number)) && ((round($number)) % 2==0)){
+            echo "$number is even";
+           }
+         else {
+              echo "$number is not a number";
+           }
+        
+		}	
+?>
+</body></html> 
+HTML
+  <html><head><title>Test for even numbers</title></head>
+   <body bgcolor="lavender">
+   <form action="ques5.php">
+   <p>
+    Enter a value
+   <input type="text" size=6 name="number">
+   <p>
+   <input type="submit" name="submit" value="Enter a value" >
+</form>
+(the output) 
