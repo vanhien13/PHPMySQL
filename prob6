@@ -1,0 +1,32 @@
+Problem 6:
+
+(the code)
+
+<?php
+<html>
+<body>
+<?php
+echo "<table border=\"1\" alin=\"center\">";
+echo "<tr><th>Fahrenheit</th>";
+echo "<th>Celcisus</th></tr>";
+//Define the initial value of Fahrenheit
+$Deg = 0;
+$Fah = 0;
+// While loop to covert Fahrenheit to Celcius
+while ($Deg < 105) {
+    $Cel = (5/9)*($Deg-32);
+    $Deg += 5;
+	$Fah = $Deg - 5; 
+    echo "<tr><td>";
+	echo $Fah;
+	echo "</td><td>";
+    echo round($Cel,2);
+	echo "</td><td>";
+    echo "</td><tr>";
+}
+?>
+</body>
+</html>
+
+ (the output)
+ 
