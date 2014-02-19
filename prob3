@@ -1,0 +1,20 @@
+Problem 3:
+
+(the code)
+
+<html>
+<body>
+<?php
+
+// Define an array variables
+$example = array(13, 3.41, NULL, true, "ptttttt");
+
+// Use a loop and getype to print the list out
+foreach ($example as $value) {
+    echo gettype($value). "</br>";
+}
+
+?>
+</body>
+</html>
+(the output)
