@@ -1,0 +1,24 @@
+Problem 1:
+
+(the codes)
+<?php
+ 
+$name       = "Hien V. Nguyen";
+$occupation = "Economist";
+echo <<<EOF
+
+This is a heredoc section.
+For more information on the economy please do NOT talk to $name, your "know-nothing" $occupation.
+ 
+Thanks!
+
+EOF;
+ 
+$toprint = <<<EOF
+
+Hey $name who is trained as an $occupation! You know nothing! LOL
+
+EOF;
+echo ($toprint);
+
+?>
