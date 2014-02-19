@@ -1,0 +1,18 @@
+Celcisus</th></tr>";
+
+// For loop to covert Fahrenheit to Celcius
+for ($Fah = 0; $Fah <= 100; $Fah+=5) {
+    $Cel = (5/9)*($Fah-32);
+    echo "<tr><td>";
+	echo $Fah;
+	echo "</td><td>";
+    echo round($Cel,2);
+	echo "</td><td>";
+    echo "</td><tr>";
+}
+?>
+</body>
+</html>
+
+ (the output)
+ 
