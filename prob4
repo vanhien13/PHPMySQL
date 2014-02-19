@@ -1,0 +1,21 @@
+Problem 4:
+
+(the code)
+
+<?php
+
+//Define interest rates in percentages
+$thi_mort_fix = 4.89; // thirty-year fixed mortgage rate 
+$fif_mort_fix = 4.62; // fifteen-year fixed mortgage rate
+$for_eig_uscar = 7.92; // forty-eight-month used car rate
+$for_eig_newcar = 7.44; // forty-eight-month new car rate
+$thi_six_uscar = 7.83; // thirty-six-month used car rate 
+
+
+//Display the rates
+echo "thirty-year fixed mortgage rate ".$thi_mort_fix. gettype($thi_mort_fix)."</br>";
+echo "fifteen-year fixed mortgage rate ".$fif_mort_fix. gettype($fif_mort_fix)."</br>";
+echo "forty-eight-month used car rate ".$for_eig_uscar. gettype($for_eig_uscar)."</br>";
+echo "forty-eight-month new car rate ".$for_eig_newcar. gettype($for_eig_newcar)."</br>";
+echo "thirty-six-month used car rate ".$thi_six_uscar. gettype($thi_six_uscar)."</br>";
+?> 
