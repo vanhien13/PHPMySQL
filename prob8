@@ -1,0 +1,43 @@
+Problem 8:
+
+(the code)
+
+<html><head><title>Grade Computation</title></head>
+<body bgcolor = "ffffcc">
+<font face="verdana" size="+1">
+<?php
+     extract ($_REQUEST);
+
+
+     gradecomputation($grade1, $grade2, $grade3);   // Passing 3 grades arguments
+     function gradecomputation($grade1, $grade2, $grade3){
+	 $average = (($grade1 + $grade2 + $grade3)/3);
+	 $average = round ($average, 2);
+	 if ((is_numeric($grade1))&&(is_numeric($grade2)) && (is_numeric($grade3)))
+	 {
+         if(($average>=90)&&($average<=100)){
+             echo"<h1>Your average score is $average and you got an A.</h1></br>";
+         }
+         elseif(($average>=80)&&($average<=89)){
+             echo"<h2>Your average score is $average and you got a B.</h2></br>";
+         }
+         elseif(($average>=70)&&($average<=79)){
+             echo"<h3>Your average score is $average and you got a C.</h3></br>";
+		 }
+         elseif(($average>=60)&&($average<=69)){
+             echo"<h4>Your average score is $average and you got a D.</h4></br>";
+         }
+         elseif(($average>=0)&&($average<=60)){
+             echo"<h5 style=\"color:red\">Your average score is $average, and you got a F. You need to concetrate!</h5>";	 
+	     }
+		 else{
+		      echo "This is not a valid response";
+	     }
+	 }
+}
+	     
+	 ?>
+	 
+	 </body></html>
+
+ (the output)
